@@ -147,6 +147,28 @@
 
     welcome();
 
+    // add7, takes one numer and returns that number +7
+
+    let add7 = n => n + 7;
+    console.log(add7(5));
+
+    // Write a function called multiply that takes 2 numbers and returns their product.
+    let multiply = (a, b) => a * b;
+    console.log(multiply(5, 10 ));
+
+    //Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+    function capitalize(capString) {
+      let loweredString = capString.toLowerCase();
+      let firstLetter = loweredString.slice(0, 1);
+      return firstLetter.toUpperCase() + loweredString.substr(1);
+    };
+
+    //Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d"
+    function lastLetter(stringLast) {
+      let strLength = stringLast.length;
+      return stringLast.substring(strLength-1);
+    }
+
 
   </script>
 </body>
