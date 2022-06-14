@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Practice</title>
+</head>
+<body>
+  <p class="admitted"></p>
+  <p class="refused"></p>
+  <p class="output"></p>
+<script>
+  let output = document.querySelector('.output');
+output.innerHTML = '';
+
+const para = document.createElement('p');
+
+for(let i=10; i >=0; i--){
+	const para = document.createElement('p');
+	output.appendChild(para);
+	if(i == 10){
+	para.textContent="Countdown to 10";
+	} else if(i==0){
+	para.textContent="Blast off!";
+	} else {
+	para.textContent = i;
+	}
+}
+
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: ';
+
+// loop starts here 
+/* using standard for
+for(let i = 0; i < people.length; i++){
+  if(people[i] == "Phil" || people[i] == "Lola"){
+    refused.textContent += people[i];
+  } else {
+    admitted.textContent += people[i]
+  }
+}
+*/
+
+// using for...of loop
+for(const person of people){
+  if(person == "Phil" || person == "Lola"){
+    refused.textContent += `${person}, `;
+  } else {
+    admitted.textContent += `${person}, `;
+  }
+}
+
+refused.textContent = refused.textContent.slice(0, refused.textContent.length-2) + ".";
+admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length-2) + ".";
+
+
+</script>
+</body>
+</html>
