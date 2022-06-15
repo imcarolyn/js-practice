@@ -58,6 +58,43 @@ for(const person of people){
 refused.textContent = refused.textContent.slice(0, refused.textContent.length-2) + ".";
 admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length-2) + ".";
 
+//output even numbers from 2 to 10
+// standard for
+for(let i=2; i <= 10; i = i+2){
+  console.log(i);
+}
+
+//while loop
+let even = 0;
+while(even <= 10){
+  console.log(even);
+  even = even + 2;
+}
+
+//repeat until user inputs number greater than 100
+let greaterThan100 = prompt("Enter a number greater than 100");
+while(greaterThan100 <= 100 && greaterThan100){
+  greaterThan100 = prompt("Enter a number greater than 100");
+}
+
+//or using do while
+/*
+let greaterThan100;
+do {
+  greaterThan100 = prompt("Enter a number greater than 100");
+} while(greaterThan100 <= 100 && greaterThan100);
+*/
+
+//output prime numbers from 2 to n
+let n = 10;
+nextPrime:
+for(let i=2; i <= n; i++){
+  
+  for(let j=2; j <= Math.sqrt(i); j++){
+    if( i % j == 0) continue nextPrime;
+  }
+  console.log(i);
+}
 
 </script>
 </body>
